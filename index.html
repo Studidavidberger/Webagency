@@ -5,6 +5,7 @@
     <title>WEBAGENCY</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="icon" href="webagency_images/images/favicon.ico">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
@@ -46,54 +47,62 @@
             NOS SERVICES
         </h1>
         <div class="text-black-50 d-flex flex-column align-items-center">
-            <img style="width: 26px" class="position-absolute  z-1 m-1" src="webagency_images/images/portfolio/dot.png" alt="portfolio_blue_dot">
+            <img style="width: 26px" class="sliding position-absolute  z-1 m-1" src="webagency_images/images/portfolio/dot.png" alt="portfolio_blue_dot">
             <hr style="width: 200px;">
             <p>
                 De taille humaine, notre agence vous accompagne du début à la fin de votre projet.
-                Nos experts vous aident à optimiser l'experience utilisateur
+                Nos experts vous aident <br>à optimiser l'experience utilisateur
                 et tirer le meilleur potentiel de chaque support, du web au mobile.
             </p>
         </div>
     </div>
 
             <!-- LEFT SIDE-->
-    <div class="container-md d-flex row">
-        <img class="object-fit-contain w-50 col" src="webagency_images/images/main-feature.png" alt="main_feature">
+    <div class="container-md d-flex">
+        <!-- ERREURE_01 : JE N'ARRIVee PAS A METTRE L'IMAGE EN MAX-WIDTH 50% AVEC BOOTSTRAP
+         RESOLU UTILISER sssLA PROPRIETE WIDTH DANS LA BALISE "IMG" DIRECTEMENT AU LIEU DE SA DIV-->
+        <img style class="object-fit-contain w-50" src="webagency_images/images/main-feature.png" alt="main_feature">
 
         <!-- RIGHT SIDE -->
-        <div style="max-width: 70px;" class="d-flex flex-column gap-5">
-            <div class="position-absolute">
-                <img src="webagency_images/images/graph.png" alt="graph">
-                <img class="position-relative" src="webagency_images/images/round.png" alt="graph">
+    <div class="col">
 
-            </div>
-
-            <img src="webagency_images/images/bocses.png" alt="graph">
-            <img src="webagency_images/images/camembert.png" alt="graph">
+        <div>
+            <img class="position-absolute animation" src="webagency_images/images/round.png" alt="ring-nimated">
+            <img  src="webagency_images/images/graph.png" alt="graph">
         </div>
 
+        <div>
+            <img class="position-absolute animation delay-2" src="webagency_images/images/round.png" alt="ring-nimated">
+            <img src="webagency_images/images/bocses.png" alt="graph">
+        </div>
+
+        <div>
+            <img class="position-absolute animation delay-1" src="webagency_images/images/round.png" alt="ring-nimated">
+            <img src="webagency_images/images/camembert.png" alt="graph">
+        </div>
+        </div>
         <div class="col">
             <div>
-                <h6>UX design</h6>
+                <h6 class="fw-bold" >UX design</h6>
                 <p>
-                    Une équipe passionnée qui place l'utilisateur final au centrede sa
+                    Une équipe passionnée qui place l'utilisateur final au centre de sa
                     démarche pour une technologie plus humaine.
                 </p>
             </div>
 
             <div>
-                <h6>UX design</h6>
+                <h6 class="fw-bold" >UI design</h6>
                 <p>
-                    Une équipe passionnée qui place l'utilisateur final au centrede sa
-                    démarche pour une technologie plus humaine.
+                    Une interface optimisée qui permet à votre site web de rester à la page<br>
+                    au gré des évolutions techniques et des nouveaux usages.
                 </p>
             </div>
 
             <div>
-                <h6>UX design</h6>
+                <h6 class="fw-bold" >SEO</h6>
                 <p>
-                    Une équipe passionnée qui place l'utilisateur final au centrede sa
-                    démarche pour une technologie plus humaine.
+                    Nos experts en référencement vous permettent d'améliorer le<br>
+                    positionnement de votre site afin d'augmenter votre conversion.
                 </p>
             </div>
 
