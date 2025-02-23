@@ -1,20 +1,67 @@
+# Installer git
+sudo apt install git
+
+# Afficher la version de Git ( ectuelle 2.43.0 )
+git -v
+
+# Initialiser un environnement github
+git init
+
+# Ajouter des fichiers au projet
+git add -A gère tous les changements
+ou
+git add --all
+git add . gère les nouveaux fichiers et les modifications, sans les suppressions
+git add -u gère les modifications et les suppressions, sans les nouveaux fichiers.
+ou
+git add --update
+
+# Annuler les changement
+git reset
+
 # creer une nouvelle branche
-git checkout -b develop
+git checkout -b developer
+ou
+git branch developer
 
 # Lister toutes les branches
-git branch -&
+git branch -a
+
+# Changer de branche
+git switch main
 
 # Importer du code
 git clone https://github.com/repo.git
 
-#
+# Pousser du code pour la premiere fois
+git push -u origin develop
+ou
+git push --set-upstream origin develop
 
+# Fusionner la partie develop avec la partie main
+git checkout master
+puis
+git merge develop
 
-#
+# Supprimer une branche github distante
+git push -d origin develop
+ou
+git push --delete origin develop
 
-
-#
+# Supprimer une branche github locale
+git branch -d developer
+ou
+git branch --delete developer
 
 
 ##################
-ERROR 1
+ERROR 1 - LORS CE QU'UNE RECONSTRUCTION EST EN COURS
+COMMANDE : git switch main
+OUTPUT : fatal: cannot switch branch while rebasing
+SOLUTION : git rebase --quit
+
+ERROR 2 POUSSER DU CODE QUAND DU CODE EST MANQUANT 
+COMMANDE : GIT PUSH 
+OUTPUT : Updates were rejected because the remote contains work that you do not
+have locally. This is usually caused by another repository pushing to the same ref.
+SOLUTION : 
